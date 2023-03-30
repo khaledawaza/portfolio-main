@@ -1,0 +1,518 @@
+/*
+Table of Contents: 
+0. Global: Spacing & Layout
+1. Global: Colours
+2. Global: Text
+3. Global: Interactive Elements
+4. Global: Primary Navigation
+5. Global: Footer
+6. Page: Home
+7. Page: Work
+8. Page: About
+9. Page: Contact
+*/
+/* 
+=====================================
+1. GLOBAL COLOUR STYLINGS
+=====================================
+*/
+
+:root {
+    /* primary brand colors*/
+    --wolf-grey: #b3a7b1ef;
+    /* body                 background-color*/
+    --night-black: #2e2e30ef;
+    /* body; table          color */
+    --ocean-blue: #078bf8ef;
+    /* button               background-color*/
+    --snow-white: #fffdfe;
+    /* button               color */
+    --stone-turquoise: #0882bbef;
+    /* anchor               color */
+    /* secondary brand colors */
+    --light-pink: #eddfdfdf;
+    /* body                 background-color*/
+    /* action colors */
+    --vistied-blue: #2a306bef;
+    /* anchor:hover      background-color */
+    --active-blue: #b3aa79ef;
+    /* anchor:focus      background-color */
+    --silver-white: #f9fcffef;
+    /* button           border color */
+    /* Berliner Tor colors */
+    --sun-shine: #c5bb3bfc;
+    /* sun 0% */
+    --evening-sun: #ae6609ef;
+    /* sun 50% */
+    --sun-set: #750e0aef;
+    /* sun 100% */
+}
+/* 
+=====================================
+0. GLOBAL SPACINGS AND LAYOUT
+=====================================
+*/
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin: 0;
+}
+
+main {
+    margin: 0;
+    padding: 30px 20px 80px 20px;
+    /*padding: 20px;*/
+}
+
+footer {
+    margin: 0;
+}
+
+
+/* 
+=====================================
+2. GLOBAL TEXT STYLINGS:    >>>> TYPOGRAPHY
+=====================================
+*/
+
+:root {
+    --size-large: 22px;
+    --size-standard: 16px;
+    --size-button: 18px;
+    --h1-size: 35px;
+    --h2-size: 27px;
+    --h3-size: 24px;
+    --font-heavy: 800;
+    --font-bold: 600;
+    --font-light: 400;
+    --line-large: 1.6;
+    --line-medium: 1.3;
+    --line-small: 1.0;
+}
+
+body {
+    /* color */
+    /* background-color: var(--wolf-grey); */
+    color: var(--night-black);
+    /* typography */
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--size-standard);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
+}
+
+h1 {
+    /* typography */
+    font-size: var(--h1-size);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
+}
+
+h2 {
+    /* typography */
+    font-size: var(--h2-size);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
+}
+
+h3 {
+    /* typography */
+    font-size: var(--h3-size);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
+}
+
+
+/* 
+=====================================
+3. INTERACTIVE ELEMENTS
+=====================================
+*/
+
+:root {
+    --primary-color: #357b70;
+    --secondary-color: #e0b354;
+    --dark-grey: #2b2b2b;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--stone-turquoise);
+    /*margin: 5px;*/
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--heaven-blue);
+}
+
+a:active {
+    color: var(--smaragd-green);
+}
+
+.button-code,
+.button-contact,
+.button {
+    /* Color */
+    background-color: var(--ocean-blue);
+    color: var(--snow-white);
+    /*Typographie */
+    font-family: inherit;
+    font-size: var(--size-button);
+    text-decoration: none;
+    /*Layout */
+    display: inline-block;
+    margin: 5px;
+    /*margin can be found under anchor*/
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    /* border-bottom: 2px solid var(--silver-white); */
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.button-code:hover,
+.button-code:focus,
+.button-contact:hover,
+.button-contact:focus .button:hover,
+.button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+/* 
+=====================================
+4. PRIMARY NAVIGATION
+=====================================
+<header         class="page-header"
+<img            class="page-header__item" class="page-header__logo"
+<nav            class="page-header__item" class="navigation-menu"
+<ul             class="navigation-list"
+<li             <a class="navigation-list__item" class="navigation-list__item--active"
+*/
+
+
+/* === header === */
+
+.page-header {
+    /* color */
+    /* background-color: var(--light-pink); */
+    /* layout */
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.page-header__item {
+    flex: 0 1 50px;
+}
+
+.page-header__item:last-child {
+    text-align: right;
+    flex-grow: 1;
+}
+
+
+/* === UL === */
+
+.navigation-list {
+    list-style-type: none;
+}
+
+
+/* === links (list) === */
+
+.navigation-list li {
+ 
+    display: inline-block;
+    /*margin: 5px 20px;*/
+    margin: 15px;
+}
+
+.navigation-list__item--active {
+    text-decoration: none;
+}
+
+
+/* === brand logo === */
+/*.page-header__logo{
+max-width: 5px;
+height: 10px;
+padding-right: 100px;
+}*/
+
+@media all and (min-width: 300px) and (max-width: 500px) {
+    .page-header__logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/* 
+=====================================
+5. FOOTER
+=====================================
+<footer         class="page-footer"></footer>
+<div            class="social-media
+<img            class="social-media__item--icon" 
+*/
+
+.page-footer {
+    /* color */
+    background-color: var(--light-pink);
+    /* layout */
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top: 2px solid var(--eagleEye-grey);
+    padding: 30px 0 100px 0;
+}
+
+.social-media__item--icon {
+    width: 57px;
+    height: auto;
+    margin: 2px;
+}
+
+
+/* 
+=====================================
+6. HOME PAGE
+=====================================
+*/
+
+.profile {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile__picture {
+    float: left;
+    width: 200px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+
+/* 
+=====================================
+7. WORK PAGE
+=====================================
+*/
+
+
+/******start grid fallback */
+
+.project-list__item {
+    display: inline-block;
+    padding: 20px;
+    width: 33%;
+}
+
+
+/******end grid fallback */
+
+@supports (display: grid) {
+    .project-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    .project-list__item {
+        background-color: var(--light-pink);
+        width: 100%;
+    }
+    .project-list__item:last-child {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+    }
+}
+
+
+/* 
+=====================================
+8. About PAGE
+=====================================
+*/
+.col-grup{
+    background-color: rgb(238, 213, 213);
+}
+
+.about-page {
+    text-align: center;
+}
+
+.container-intro {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 100px 20px 100px;
+}
+
+.intro-list {
+    list-style-type: none;
+.container-insights {
+    background-color: var(--wolf-grey);
+    border: 1px solid var(--light-pink);
+    margin: 15px 50px;
+    padding: 20px 100px;
+}
+
+.container-table {
+    background-color: var(--wolf-grey);
+    border: 1px solid var(--light-pink);
+    margin: 15px 50px;
+}
+
+.table-canvas {
+    background-color: var(--snow-white);
+    border: 1px solid var(--night-black);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 20px 0;
+}
+
+
+/*.table-canvas__item{                              
+  padding: 5px;
+}*/
+
+.table-headline {
+    color: var(--night-black);
+    font-weight: var(--font-bold);
+    font-size: var(--size-large);
+    text-decoration: underline var(--night-black);
+}
+.berlin-illustration {
+    width: 50%;
+    height: auto;
+}
+
+.container-berliner {
+    max-width: 500px;
+    height: auto;
+    border: 2px solid red;
+    padding: 200px;
+}
+
+@keyframes color-change {
+    0% {
+        fill: var(--sun-shine);
+    }
+    50% {
+        fill: var(--evening-sun);
+    }
+    100% {
+        fill: var(--sun-set);
+    }
+}
+
+.sun {
+    animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-moves {
+    from {
+        transform: translate(0. 50px)
+    }
+    to {
+        transform: translate(200px, 50px)
+    }
+}
+
+.cloud-front {
+    animation: 30s cloud-moves infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+    from {
+        transform: translate(450px, 48px);
+        /*transform: rotate(0deg)*/
+    }
+    to {
+        transform: translate(100px, 48px);
+        /*transform: rotate(120deg)*/
+    }
+}
+
+.cloud-back {
+    animation: 10s cloud-move-reverse infinite alternate linear;
+}
+
+
+/* 
+=====================================
+9. Contact PAGE
+=====================================
+*/
+
+.contact-container {
+    border: 2px solid var(--light-pink);
+    /* ISSUE: Why does it not work ? */
+    background-color: var(--snow-white);
+}
+
+.contactPage-main {
+    text-align: center;
+}
+
+.registration-container {
+    padding: 50px 0;
+}
+
+.registration-container__form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.standard-label,
+.standard-input {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.standard-input {
+    padding: 4px 10px;
+}
+
+
+/* Media */
+
+@media all and (max-width: 500px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .project-list {
+        gap: 10px;
+    }
+    .project-list__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+    h1 {
+     font-size:20px;
+    }
+}

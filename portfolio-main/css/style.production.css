@@ -1,0 +1,625 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+/*
+Table of Contents: 
+0. Global: Spacing & Layout
+1. Global: Colours
+2. Global: Text
+3. Global: Interactive Elements
+4. Global: Primary Navigation
+5. Global: Footer
+6. Page: Home
+7. Page: Work
+8. Page: About
+9. Page: Contact
+*/
+
+
+/* 
+=====================================
+1. GLOBAL COLOUR STYLINGS
+=====================================
+*/
+
+/* s:root {
+    /* primary brand colors*/
+    /* body                 background-color*/
+    /* body; table          color */
+    /* button               background-color*/
+    /* button               color */
+    /* anchor               color */
+    /* secondary brand colors */
+    /* body                 background-color*/
+    /* action colors */
+    /* anchor:hover      background-color */
+    /* anchor:focus      background-color */
+    /* button           border color */
+    /* Berliner Tor colors */
+    /* sun 0% */
+    /* sun 50% */
+    /* sun 100% */
+
+
+
+/* 
+=====================================
+0. GLOBAL SPACINGS AND LAYOUT
+=====================================
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+header {
+    margin: 0;
+}
+
+main {
+    margin: 0;
+    padding: 30px 20px 80px 20px;
+    /*padding: 20px;*/
+}
+
+footer {
+    margin: 0;
+}
+
+
+/* 
+=====================================
+2. GLOBAL TEXT STYLINGS:    >>>> TYPOGRAPHY
+=====================================
+*/
+
+body {
+    /* color */
+    /* background-color: var(--wolf-grey); */
+    color: #2e2e30ef;
+    /* typography */
+    font-family: 'Roboto', sans-serif;
+    /* Question: Why do we not use the google Typografie here? */
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h1 {
+    /* typography */
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h2 {
+    /* typography */
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h3 {
+    /* typography */
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+
+/* 
+=====================================
+3. INTERACTIVE ELEMENTS
+=====================================
+*/
+
+a {
+    color: #357b70;
+}
+
+a {
+    color: #0882bbef;
+    /*margin: 5px;*/
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(214, 122, 127);
+}
+
+a:active {
+color: rgb(214, 122, 127);
+}
+
+.button-code {
+    /* Color */
+    background-color: #078bf8ef;
+    color: #fffdfe;
+    /*Typographie */
+    font-family: inherit;
+    font-size: 18px;
+    text-decoration: none;
+    /*Layout */
+    display: inline-block;
+    margin: 5px;
+    /*margin can be found under anchor*/
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    /* border-bottom: 2px solid var(--silver-white); */
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.button-contact {
+    /* Color */
+    background-color: #078bf8ef;
+    color: #fffdfe;
+    /*Typographie */
+    font-family: inherit;
+    font-size: 18px;
+    text-decoration: none;
+    /*Layout */
+    display: inline-block;
+    margin: 5px;
+    /*margin can be found under anchor*/
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    /* border-bottom: 2px solid var(--silver-white); */
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.button {
+    /* Color */
+    background-color: #078bf8ef;
+    color: #fffdfe;
+    /*Typographie */
+    font-family: inherit;
+    font-size: 18px;
+    text-decoration: none;
+    /*Layout */
+    display: inline-block;
+    margin: 5px;
+    /*margin can be found under anchor*/
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    /* border-bottom: 2px solid var(--silver-white); */
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.button-code:hover,
+.button-code:focus,
+.button-contact:hover,
+.button-contact:focus .button:hover,
+.button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+/* 
+=====================================
+4. PRIMARY NAVIGATION
+=====================================
+<header         class="page-header"
+<img            class="page-header__item" class="page-header__logo"
+<nav            class="page-header__item" class="navigation-menu"
+<ul             class="navigation-list"
+<li             <a class="navigation-list__item" class="navigation-list__item--active"
+*/
+
+
+/* === header === */
+
+.page-header {
+    /* color */
+    /* background-color: var(--light-pink); */
+    /* layout */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    /*border-bottom: 3px solid var(--eagleEye-grey);*/
+    /* Issue: I added sth (do not know what) and now the border is not shown. What can influence the border line? */
+}
+
+.page-header__item {
+    /* ISSUE: How does this work? My picture is getting bigger and bigger eacht time I change the size, also when I use smaller numbers!!! 
+                                          This is an issue with jpg picture. I designed my own svg, added it and it works much better now. */
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50px;
+            flex: 0 1 50px;
+}
+
+.page-header__item:last-child {
+    text-align: right;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+
+
+/* === UL === */
+
+.navigation-list {
+    list-style-type: none;
+}
+
+
+/* === links (list) === */
+
+.navigation-list li {
+    /* Question: Why do we not give the li a class, for instance, class="navigation-menu__item". And then the ul the name "list-navigation"? */
+    display: inline-block;
+    /*margin: 5px 20px;*/
+    margin: 15px;
+}
+
+.navigation-list__item--active {
+    text-decoration: none;
+}
+
+
+/* === brand logo === */
+
+
+/*.page-header__logo{                       /* Question: Why can I not use this property and value to specifiy the width and height? I had to add the information into the html code. 
+max-width: 5px;
+height: 10px;
+padding-right: 100px;
+}*/
+
+@media all and (min-width: 300px) and (max-width: 500px) {
+    .page-header__logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/* 
+=====================================
+5. FOOTER
+=====================================
+<footer         class="page-footer"></footer>
+<div            class="social-media
+<img            class="social-media__item--icon" 
+*/
+
+.page-footer {
+    /* color */
+    background-color: #eddfdfdf;
+    /* layout */
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    border-top: dashed red;
+    /* Issue: I added sth (do not know what) and now the border is not shown. What can influence the border line? */
+    padding: 30px 0 100px 0;
+}
+
+.social-media__item--icon {
+    width: 57px;
+    height: auto;
+    margin: 2px;
+}
+
+
+/* 
+=====================================
+6. HOME PAGE
+=====================================
+*/
+
+.profile {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile__picture {
+    float: left;
+    width: 200px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+
+/* 
+=====================================
+7. WORK PAGE
+=====================================
+*/
+
+
+/******start grid fallback */
+
+.project-list__item {
+    display: inline-block;
+    padding: 20px;
+    width: 33%;
+}
+
+
+/******end grid fallback */
+
+@supports (display: grid) {
+    .project-list {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    .project-list__item {
+        background-color: #eddfdfdf;
+        width: 100%;
+    }
+    .project-list__item:last-child {
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 1;
+        grid-column: 3 / 4;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        grid-row: 1 / 3;
+    }
+}
+
+
+/* 
+=====================================
+8. About PAGE
+=====================================
+*/
+
+.about-page {
+    text-align: center;
+}
+
+.container-intro {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 100px 20px 100px;
+}
+
+.intro-list {
+    list-style-type: none;
+    /*Issue: I want to show disc but the discs are shown on the left side. I checked the border and can see it looks like a table. */
+}
+
+.container-insights {
+    background-color: #b3a7b1ef;
+    border: 1px solid #eddfdfdf;
+    margin: 15px 50px;
+    padding: 20px 100px;
+}
+
+.container-table {
+    background-color: #b3a7b1ef;
+    border: 1px solid #eddfdfdf;
+    margin: 15px 50px;
+}
+
+.table-canvas {
+    background-color: #fffdfe;
+    border: 1px solid #2e2e30ef;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 20px 0;
+}
+
+
+/*.table-canvas__item{                          Issue: Access to table is not easy. Can not change the table size only on container side. But using padding or margin, not possible.                    
+  padding: 5px;
+}*/
+
+.table-headline {
+    color: #2e2e30ef;
+    font-weight: 600;
+    font-size: 22px;
+    -webkit-text-decoration: underline #2e2e30ef;
+            text-decoration: underline #2e2e30ef;
+}
+
+
+/*
+ISSUE: I can not move the button, want more space top and bottom
+.container-buttoncv{  
+  border: 2px solid black;
+  margin: 20px 0;
+}*/
+
+
+/* ISSUE: I can not change the picture size */
+
+.berlin-illustration {
+    width: 50%;
+    height: auto;
+}
+
+.container-berliner {
+    max-width: 500px;
+    height: auto;
+    border: 2px solid red;
+    padding: 200px;
+}
+
+@-webkit-keyframes color-change {
+    0% {
+        fill: #c5bb3bfc;
+    }
+    50% {
+        fill: #ae6609ef;
+    }
+    100% {
+        fill: #750e0aef;
+    }
+}
+
+@keyframes color-change {
+    0% {
+        fill: #c5bb3bfc;
+    }
+    50% {
+        fill: #ae6609ef;
+    }
+    100% {
+        fill: #750e0aef;
+    }
+}
+
+.sun {
+    -webkit-animation: 4s color-change infinite alternate linear;
+            animation: 4s color-change infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-moves {
+    from {
+        -webkit-transform: translate(0. 50px);
+                transform: translate(0. 50px)
+    }
+    to {
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px)
+    }
+}
+
+@keyframes cloud-moves {
+    from {
+        -webkit-transform: translate(0.50px);
+                transform: translate(0.50px)
+    }
+    to {
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px)
+    }
+}
+
+.cloud-front {
+    -webkit-animation: 30s cloud-moves infinite alternate linear;
+            animation: 30s cloud-moves infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+    from {
+        -webkit-transform: translate(450px, 48px);
+                transform: translate(450px, 48px);
+        /*transform: rotate(0deg)*/
+    }
+    to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+        /*transform: rotate(120deg)*/
+    }
+}
+
+@keyframes cloud-move-reverse {
+    from {
+        -webkit-transform: translate(450px, 48px);
+                transform: translate(450px, 48px);
+        /*transform: rotate(0deg)*/
+    }
+    to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+        /*transform: rotate(120deg)*/
+    }
+}
+
+.cloud-back {
+    -webkit-animation: 10s cloud-move-reverse infinite alternate linear;
+            animation: 10s cloud-move-reverse infinite alternate linear;
+}
+
+
+/* 
+=====================================
+9. Contact PAGE
+=====================================
+*/
+
+.contact-container {
+    border: 2px solid #eddfdfdf;
+    /* ISSUE: Why does it not work ? */
+    background-color: #fffdfe;
+}
+
+.contactPage-main {
+    text-align: center;
+}
+
+.registration-container {
+    padding: 50px 0;
+}
+
+.registration-container__form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.standard-label,
+.standard-input {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.standard-input {
+    padding: 4px 10px;
+}
+
+
+/**************************************************************************** Media */
+
+@media all and (max-width: 500px) {
+    .project-list {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .project-list {
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .project-list {
+        gap: 10px;
+    }
+    .project-list__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+    h1 {
+        font-size: 20px;
+    }
+}
